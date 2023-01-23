@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/c007b64272.js" crossorigin="anonymous"></script>
+    <script src="./books.js"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body id="books_body">
+    <section>
+        <nav>
+            <div class="nav__container">
+                <img src="./assets/Library.svg" alt="" class="logo">
+                <ul class="nav__links">
+                    <li><a href="#" class="nav__link">Home</a></li>
+                    <li><a href="#" class="nav__link">Contact</a></li>
+                    <li><a href="#" class="nav__link">Books</a></li>
+                </ul>
+                <button class="button__menu" onclick="openMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="menu__backdrop" style="visibility: hidden;">
+                    <button class="button__menu button__menu--close" onclick="closeMenu()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list" onclick="closeMenu()">
+                            <a href="#landing" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__list" onclick="closeMenu()">
+                            <a href="#recent" class="menu__link">Books</a>
+                        </li>
+                        <li class="menu__list" onclick="closeMenu()">
+                            <a href="" class="menu__link no-cursor">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <main id="books__main">
+        <div class="container">
+            <div class="row">
+                <h2 class="section__title books__header--title">
+                    All <span class="text-purple">Books</span>
+                </h2>
+                <div class="book">
+                    <figure class="book__img--wrapper">
+                        <img src="./assets/atomic habits.jpg" alt="" class="book__img">
+                    </figure>
+                    <div class="book__title">
+                        Atomic Habits
+                    </div>
+                    <div class="book__ratings">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="book__price">
+                        <span class="book__price--nomal">$59.95</span>$14.95
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <a href="#">
+                    <figure class="footer__logo">
+                        <img src="./assets/Library.svg" alt="" class="footer__logo--img">
+                    </figure>
+                </a>
+                <div class="footer__links">
+                    <a href="#landing" class="footer__link">Home</a>
+                    <a href="" class="footer__link no-cursor">About</a>
+                    <a href="#recent" class="footer__link">Books</a>
+                    <a href="" class="footer__link no-cursor">Contact</a>
+                </div>
+                <div class="footer__copyright">
+                    <h3>Copyright © 2022 Alessandro Godino</h3>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
