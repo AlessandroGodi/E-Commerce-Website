@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +8,8 @@
     <title>Library</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="https://kit.fontawesome.com/c007b64272.js" crossorigin="anonymous"></script>
-    <script src="./books.js"></script>
-    <script src="./index.js"></script>
+    <script src="./books.js" defer></script>
+    <script src="./index.js" defer></script>
 </head>
 
 <body id="books_body">
@@ -48,26 +48,19 @@
     <main id="books__main">
         <div class="container">
             <div class="row">
-                <h2 class="section__title books__header--title">
-                    All <span class="text-purple">Books</span>
-                </h2>
-                <div class="book">
-                    <figure class="book__img--wrapper">
-                        <img src="./assets/atomic habits.jpg" alt="" class="book__img">
-                    </figure>
-                    <div class="book__title">
-                        Atomic Habits
-                    </div>
-                    <div class="book__ratings">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <div class="book__price">
-                        <span class="book__price--nomal">$59.95</span>$14.95
-                    </div>
+                <div class="books__header">
+                    <h2 class="section__title books__header--title">
+                        All <span class="text-purple">Books</span>
+                    </h2>
+                    <select id="filter">
+                        <option value="" disabled selected>Sort</option>
+                        <option value="Low_TO_HIGH">Price, Low to High</option>
+                        <option value="HIGH_TO_LOW">Price, High to Low</option>
+                        <option value="RATING">Rating</option>
+                    </select>
+                </div>
+                <div class="books">
+
                 </div>
             </div>
         </div>
