@@ -294,6 +294,7 @@ h2 {
 
 .books {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .book {
@@ -425,6 +426,7 @@ BOOKS PAGE
 
 #books__main {
     flex: 1;
+    min-height: 100vh;
 }
 
 .books__header {
@@ -451,17 +453,25 @@ select {
     max-width: 200px;
 }
 
-.books__landing {
+.books__loading {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 35%;
     font-size: 60px;
     color: #7342d6;
 }
 
+.books__loading--spinner {
+    display: none !important;
+}
+
+.books__loading .books__loading--spinner {
+    display: block !important;
+}
+
 .fa-spinner {
-    animation: rotate 600ms infinite linear;
+    animation: rotate 800ms infinite linear;
 }
 
 @keyframes rotate {

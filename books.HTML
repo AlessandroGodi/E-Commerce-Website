@@ -18,9 +18,9 @@
             <div class="nav__container">
                 <img src="./assets/Library.svg" alt="" class="logo">
                 <ul class="nav__links">
-                    <li><a href="#" class="nav__link">Home</a></li>
+                    <li><a href="./index.HTML" class="nav__link">Home</a></li>
                     <li><a href="#" class="nav__link">Contact</a></li>
-                    <li><a href="#" class="nav__link">Books</a></li>
+                    <li><a href="./index.HTML#recent" class="nav__link">Books</a></li>
                 </ul>
                 <button class="button__menu" onclick="openMenu()">
                     <i class="fa-solid fa-bars"></i>
@@ -34,7 +34,7 @@
                             <a href="#landing" class="menu__link">Home</a>
                         </li>
                         <li class="menu__list" onclick="closeMenu()">
-                            <a href="#recent" class="menu__link">Books</a>
+                            <a href="./index.HTML#recent" class="menu__link">Books</a>
                         </li>
                         <li class="menu__list" onclick="closeMenu()">
                             <a href="" class="menu__link no-cursor">Contacts</a>
@@ -52,15 +52,15 @@
                     <h2 class="section__title books__header--title">
                         All <span class="text-purple">Books</span>
                     </h2>
-                    <select id="filter">
+                    <select id="filter" onchange="filterBooks(event)">
                         <option value="" disabled selected>Sort</option>
-                        <option value="Low_TO_HIGH">Price, Low to High</option>
+                        <option value="LOW_TO_HIGH">Price, Low to High</option>
                         <option value="HIGH_TO_LOW">Price, High to Low</option>
                         <option value="RATING">Rating</option>
                     </select>
                 </div>
                 <div class="books">
-
+                    <i class="fas fa-spinner books__loading--spinner"></i>
                 </div>
             </div>
         </div>
