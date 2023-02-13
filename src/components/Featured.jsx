@@ -1,4 +1,6 @@
 import React from 'react';
+import Book from './ui/Book';
+import { books } from '../data';
 
 const Featured = () => {
     return (
@@ -9,21 +11,16 @@ const Featured = () => {
                         Featured <span className="purple">Books</span>
                     </h2>
                     <div className="books">
-                        <div className="book">
-                            <a href="/">
-                                <figure>
-                                    <img src="https://covers.openlibrary.org/b/id/8091016-L.jpg" alt="" />
-                                </figure>
-                            </a>
-                            <div className="book__title">
-                                <a href="/" className='book__title--link'>
-                                    Atomic Habits
-                                </a>
-                            </div>
-                            <div className="book__ratings">
-                                
-                            </div>
-                        </div>
+                        {books
+                            .filter((book) => book.rating === 5)
+                            .slice(0, 4)
+                            .map(book => (
+                                <Book  
+                                book={book}
+                                key={book.id}
+                                />
+                            ))
+                        }
                     </div>
                 </div>
             </div>
