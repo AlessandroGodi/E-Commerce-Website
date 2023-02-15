@@ -11,7 +11,10 @@ const Discounted = () => {
                         Discouted <span className="purple">Books</span>
                     </h2>
                     <div className="books">
-                        {books.map((book) => (
+                        {books
+                        .filter(book => book.salePrice)
+                        .slice(0, 8)
+                        .map((book) => (
                             <Book book={book} key={book.id} />
                         ))}
                     </div>
