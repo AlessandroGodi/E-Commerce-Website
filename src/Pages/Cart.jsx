@@ -60,9 +60,8 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                                                         type={`number`}
                                                         min={0}
                                                         max={99}
-                                                        value={book.id.quantity}
-                                                        onClick={(event) => changeQuantity(book, event.target.value)}
-                                                        // when value={book.quantity} react shits itself (I fucked up somewhere)
+                                                        value={book.quantity}
+                                                        onChange={(event) => changeQuantity(book, event.target.value)}
                                                         className="cart__input" />
                                                 </div>
                                                 <div className="cart__total">
